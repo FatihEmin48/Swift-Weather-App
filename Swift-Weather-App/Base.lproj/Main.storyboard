@@ -1,24 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxs-wX-xs6">
+                                <rect key="frame" x="74" y="357" width="85" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="HkA-xz-NZG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UD-dR-8uR">
+                                <rect key="frame" x="74" y="466" width="88" height="102"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thermometer.sun.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rOD-lL-8g3">
+                                <rect key="frame" x="13" y="270" width="71" height="55"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51.666666666666657" id="0m2-yb-EkW"/>
+                                    <constraint firstAttribute="width" constant="69.666666666666671" id="g1R-zJ-Dcs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="thermometer.sun" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E1i-Wd-o0o">
+                                <rect key="frame" x="13" y="380" width="71" height="55"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wind" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="esz-gy-k9K">
+                                <rect key="frame" x="13" y="490" width="71" height="55"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Current Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ox-oi-EzN">
+                                <rect key="frame" x="170" y="277" width="209" height="51"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Feels Like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gME-Ag-nbw">
+                                <rect key="frame" x="170" y="383" width="204" height="50"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wind Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDc-yA-KHR">
+                                <rect key="frame" x="170" y="492" width="204" height="50"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D2-q3-hUA">
+                                <rect key="frame" x="74" y="247" width="85" height="102"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" preferredBehavioralStyle="mac" translatesAutoresizingMaskIntoConstraints="NO" id="YaA-AR-bfu">
+                                <rect key="frame" x="108" y="616" width="177" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="e9n-cA-Zzi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="  GET" imagePadding="-2" titleAlignment="center">
+                                    <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                        <hierarchicalColors>
+                                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color systemColor="tertiaryLabelColor"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="26" scale="default" weight="light"/>
+                                    <fontDescription key="titleFontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="37"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.20264395988674533" green="1" blue="0.80348995935855194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-f7-d4d">
+                                <rect key="frame" x="76" y="86" width="243" height="152"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageReference key="image" image="sun.max" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                    <hierarchicalColors>
+                                        <color systemColor="labelColor"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.99465762937536717" blue="0.70410649985684937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gME-Ag-nbw" firstAttribute="leading" secondItem="HDc-yA-KHR" secondAttribute="leading" id="40k-41-RaY"/>
+                            <constraint firstItem="9UD-dR-8uR" firstAttribute="top" secondItem="gxs-wX-xs6" secondAttribute="bottom" constant="7" id="4He-he-AHM"/>
+                            <constraint firstItem="Zfp-f7-d4d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="8JZ-fK-z2c"/>
+                            <constraint firstItem="gxs-wX-xs6" firstAttribute="top" secondItem="rOD-lL-8g3" secondAttribute="bottom" constant="32.333333333333371" id="8oe-Jl-R9Y"/>
+                            <constraint firstItem="E1i-Wd-o0o" firstAttribute="centerY" secondItem="gxs-wX-xs6" secondAttribute="centerY" id="9NQ-tb-sLX"/>
+                            <constraint firstItem="YaA-AR-bfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="Dyt-Gf-65r"/>
+                            <constraint firstItem="3D2-q3-hUA" firstAttribute="leading" secondItem="gxs-wX-xs6" secondAttribute="leading" id="Egj-U3-Atg"/>
+                            <constraint firstItem="esz-gy-k9K" firstAttribute="centerY" secondItem="9UD-dR-8uR" secondAttribute="centerY" id="Ivj-ec-Klg"/>
+                            <constraint firstItem="Zfp-f7-d4d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LZK-W3-kRu"/>
+                            <constraint firstItem="3D2-q3-hUA" firstAttribute="top" secondItem="Zfp-f7-d4d" secondAttribute="bottom" constant="12.333333333333343" id="M1s-UV-IgF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zfp-f7-d4d" secondAttribute="trailing" constant="74" id="N9f-ha-eI0"/>
+                            <constraint firstItem="3D2-q3-hUA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="Q4x-m6-81D"/>
+                            <constraint firstItem="6ox-oi-EzN" firstAttribute="leading" secondItem="3D2-q3-hUA" secondAttribute="trailing" constant="11" id="Q7c-LJ-Bsc"/>
+                            <constraint firstItem="HDc-yA-KHR" firstAttribute="top" secondItem="gME-Ag-nbw" secondAttribute="bottom" constant="59" id="Qur-bt-Ysc"/>
+                            <constraint firstItem="rOD-lL-8g3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="VUB-gj-Ycm"/>
+                            <constraint firstItem="rOD-lL-8g3" firstAttribute="leading" secondItem="E1i-Wd-o0o" secondAttribute="leading" id="WbJ-UU-EN4"/>
+                            <constraint firstItem="gxs-wX-xs6" firstAttribute="top" secondItem="3D2-q3-hUA" secondAttribute="bottom" constant="8" id="Wg7-9l-Zwg"/>
+                            <constraint firstItem="rOD-lL-8g3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="Zcu-Wg-nAe"/>
+                            <constraint firstItem="esz-gy-k9K" firstAttribute="top" secondItem="gxs-wX-xs6" secondAttribute="bottom" constant="29.333333333333314" id="agU-2X-Lky"/>
+                            <constraint firstItem="gME-Ag-nbw" firstAttribute="trailing" secondItem="HDc-yA-KHR" secondAttribute="trailing" id="bzK-nR-0L2"/>
+                            <constraint firstItem="E1i-Wd-o0o" firstAttribute="top" secondItem="gME-Ag-nbw" secondAttribute="top" id="cAs-nM-xWo"/>
+                            <constraint firstItem="E1i-Wd-o0o" firstAttribute="leading" secondItem="esz-gy-k9K" secondAttribute="leading" id="eAf-0L-XQs"/>
+                            <constraint firstItem="6ox-oi-EzN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="218" id="f5x-zC-zuf"/>
+                            <constraint firstItem="YaA-AR-bfu" firstAttribute="top" secondItem="9UD-dR-8uR" secondAttribute="bottom" constant="48" id="fAG-oe-gwt"/>
+                            <constraint firstItem="gxs-wX-xs6" firstAttribute="centerY" secondItem="gME-Ag-nbw" secondAttribute="centerY" id="ffF-nx-9zv"/>
+                            <constraint firstItem="6ox-oi-EzN" firstAttribute="leading" secondItem="gME-Ag-nbw" secondAttribute="leading" id="h3t-Vf-5x3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YaA-AR-bfu" secondAttribute="bottom" constant="146" id="lwv-ub-RKL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gME-Ag-nbw" secondAttribute="trailing" constant="19" id="mY8-CP-jJl"/>
+                            <constraint firstItem="YaA-AR-bfu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nH3-mt-QIR"/>
+                            <constraint firstItem="3D2-q3-hUA" firstAttribute="trailing" secondItem="gxs-wX-xs6" secondAttribute="trailing" id="o6b-m0-8PX"/>
+                            <constraint firstItem="gME-Ag-nbw" firstAttribute="top" secondItem="6ox-oi-EzN" secondAttribute="bottom" constant="55" id="qiZ-pb-lEk"/>
+                            <constraint firstItem="E1i-Wd-o0o" firstAttribute="centerX" secondItem="esz-gy-k9K" secondAttribute="centerX" id="raa-Gp-ByI"/>
+                            <constraint firstItem="rOD-lL-8g3" firstAttribute="trailing" secondItem="E1i-Wd-o0o" secondAttribute="trailing" id="rbd-SU-bgl"/>
+                            <constraint firstItem="9UD-dR-8uR" firstAttribute="top" secondItem="E1i-Wd-o0o" secondAttribute="bottom" constant="31.333333333333371" id="sPP-h5-yaZ"/>
+                            <constraint firstItem="rOD-lL-8g3" firstAttribute="centerY" secondItem="3D2-q3-hUA" secondAttribute="centerY" id="vfm-2l-32Z"/>
+                            <constraint firstItem="HDc-yA-KHR" firstAttribute="leading" secondItem="9UD-dR-8uR" secondAttribute="trailing" constant="8" id="wNj-h4-OaO"/>
+                            <constraint firstItem="9UD-dR-8uR" firstAttribute="centerY" secondItem="HDc-yA-KHR" secondAttribute="centerY" id="xyb-I4-Mbx"/>
+                            <constraint firstItem="gxs-wX-xs6" firstAttribute="leading" secondItem="9UD-dR-8uR" secondAttribute="leading" id="yBJ-Kj-nXs"/>
+                            <constraint firstItem="6ox-oi-EzN" firstAttribute="leading" secondItem="rOD-lL-8g3" secondAttribute="trailing" constant="87.333333333333329" id="zzH-gB-elI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="87.786259541984734" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="sun.max" catalog="system" width="128" height="125"/>
+        <image name="thermometer.sun" catalog="system" width="102" height="128"/>
+        <image name="thermometer.sun.fill" catalog="system" width="102" height="128"/>
+        <image name="wind" catalog="system" width="128" height="103"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
